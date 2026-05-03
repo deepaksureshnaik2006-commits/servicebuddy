@@ -1,0 +1,31 @@
+{
+  "name": "server",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx index.ts",
+    "start": "node dist/index.js",
+    "build": "esbuild index.ts --platform=node --packages=external --bundle --format=esm --outfile=dist/index.js",
+    "db:push": "drizzle-kit push --force"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^16.4.5",
+    "drizzle-orm": "^0.45.2",
+    "express": "^4.21.1",
+    "multer": "^2.1.1",
+    "pg": "^8.11.3"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/multer": "^2.1.0",
+    "@types/node": "^22.16.5",
+    "@types/pg": "^8.11.0",
+    "drizzle-kit": "^0.31.10",
+    "esbuild": "^0.24.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.8.3"
+  }
+}
